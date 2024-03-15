@@ -5,9 +5,7 @@ document.querySelector('#hamburger').onclick = () => {
 };
 
 const hamburger = document.querySelector('#hamburger');
-
-document.addEventListener('click', function (e) {
-	e.preventDefault();
+document.addEventListener('click', function () {
 	if (!hamburger.contains(e.target) && navMenu.contains('active')) {
 		navMenu.classList.remove('active');
 	}

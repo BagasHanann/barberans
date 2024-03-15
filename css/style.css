@@ -5,6 +5,10 @@
 	--bg: #14192c;
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -12,10 +16,10 @@
 	outline: none;
 	border: none;
 	text-decoration: none;
+	font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 body {
-	font-family: 'Plus Jakarta Sans', sans-serif;
 	font-weight: 400;
 	background-color: var(--bg);
 	color: #fff;
@@ -27,7 +31,7 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 1.6rem 10%;
-	background-color: #0c0e17;
+	background-color: #131b40;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -120,8 +124,9 @@ body {
 }
 
 .about,
-.menu {
-	padding: 8rem 10% 1.4rem;
+.menu,
+.contact {
+	padding: 8rem 10% 1.2rem;
 }
 
 .about h2,
@@ -169,13 +174,144 @@ body {
 	line-height: 1.6;
 }
 
-.menu p {
+.menu p,
+.contact p {
 	text-align: center;
 	max-width: 30rem;
 	margin: auto;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	font-weight: 300;
 	line-height: 1.4rem;
+}
+
+.menu .row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 4rem;
+	justify-content: center;
+	gap: 1.8rem;
+}
+
+.menu .row .menu-card {
+	text-align: center;
+	padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img {
+	border-radius: 1rem;
+	width: 90%;
+}
+
+.menu .row .menu-card img:hover {
+	opacity: 0.6;
+	transition: 0.2s linear;
+}
+
+.menu .row .menu-card .menu-card-title {
+	margin: 1rem auto 1rem;
+}
+
+.contact .row {
+	display: flex;
+	margin-top: 2rem;
+	background-color: #131b40;
+	padding: 2rem;
+	border-radius: 1rem;
+}
+
+.contact .row .map {
+	flex: 1 1 45rem;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 1rem;
+}
+
+.contact .row form {
+	flex: 1 1 45rem;
+	padding-left: 2rem;
+	text-align: center;
+}
+
+.contact .row form .input-group {
+	display: flex;
+	align-items: center;
+	margin-top: 1rem;
+	background-color: var(--bg);
+	border: 1px solid var(--bg);
+	border-radius: 12px;
+	padding-left: 1.5rem;
+}
+
+.contact .row form .input-group input {
+	width: 100%;
+	padding: 1rem;
+	font-size: 1.4rem;
+	background-color: var(--bg);
+	color: #fff;
+	border-radius: 12px;
+	padding-left: 1.5rem;
+}
+
+.contact .row form .btn {
+	padding: 1rem 3rem;
+	border-radius: 12px;
+	font-size: 1.2rem;
+	display: inline-block;
+	font-weight: 500;
+	color: #fff;
+	margin-top: 2rem;
+	background-color: var(--primary-color);
+	cursor: pointer;
+}
+
+.contact .row form .btn:hover {
+	opacity: 0.9;
+	transition: 0.2s;
+}
+
+/* Footer */
+footer {
+	background-color: var(--primary-color);
+	text-align: center;
+	padding: 1rem 0;
+	margin-top: 4.5rem;
+}
+
+footer .social {
+	padding: 0.5rem 0;
+}
+
+footer .social a {
+	color: #fff;
+	margin: 0 0.5rem;
+	font-size: 1.3rem;
+}
+
+footer .social a:hover {
+	color: var(--bg);
+}
+
+footer .links {
+	margin-bottom: 0.5rem;
+}
+
+footer .links a {
+	color: #fff;
+	margin: 0 0.5rem;
+	font-size: 1.2rem;
+}
+
+footer .links a:hover {
+	color: var(--bg);
+}
+
+footer .credit {
+	margin-bottom: 0.5rem;
+}
+
+footer .credit a {
+	font-size: 0.8rem;
+	color: #fff;
 }
 
 /* Media Queries Laptop */
@@ -198,7 +334,7 @@ body {
 		position: absolute;
 		top: 100%;
 		right: -100%;
-		background-color: #0c0e17;
+		background-color: #131b40;
 		width: 16rem;
 		height: 35vh;
 	}
@@ -242,6 +378,32 @@ body {
 
 	.about .row .content p {
 		font-size: 1.6rem;
+	}
+
+	.menu p {
+		font-size: 1.3rem;
+	}
+
+	.menu h3 {
+		font-size: 1.8rem;
+	}
+
+	.contact .row {
+		flex-wrap: wrap;
+	}
+
+	.contact .row .map {
+		height: 30rem;
+	}
+
+	.contact .row form {
+		padding-top: 2rem;
+		padding-left: 0;
+	}
+
+	.contact .row form .btn {
+		margin-top: 3rem;
+		font-size: 1.3rem;
 	}
 }
 /* Media Queries Mobile */
