@@ -122,6 +122,56 @@ body {
 	margin-right: 1rem;
 }
 
+.shopping-cart {
+	position: absolute;
+	top: 100%;
+	right: -100%;
+	width: 30rem;
+	height: 100vh;
+	background-color: #131b40;
+	transition: 0.3s;
+}
+
+.shopping-cart .cart-items {
+	margin: 2rem 1.5rem;
+	display: flex;
+	align-items: center;
+	position: relative;
+	gap: 1rem;
+	padding-bottom: rem;
+	border-bottom: 1px solid var(--primary-color);
+}
+
+.shopping-cart img {
+	height: 6rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.shopping-cart h3 {
+	font-size: 1.3rem;
+	padding-bottom: 0.8rem;
+}
+
+.shopping-cart .item-price {
+	font-size: 1.1rem;
+}
+
+.shopping-cart .remove-item {
+	font-size: 1.2rem;
+	cursor: pointer;
+	position: absolute;
+	right: 1rem;
+}
+
+.shopping-cart.active {
+	right: 0;
+}
+
+.shopping-cart .remove-item:hover {
+	color: var(--primary-color);
+}
+
 .hero {
 	display: flex;
 	justify-content: center;
@@ -428,6 +478,90 @@ footer .credit a {
 	color: #fff;
 }
 
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal .modal-container {
+	position: relative;
+	background-color: #131b40;
+	margin: 12% auto;
+	padding: 1.2rem;
+	border-radius: 1rem;
+	width: 80%;
+	animation: animateModal 0.4s;
+}
+
+.modal-container .close-icon {
+	position: absolute;
+	right: 1rem;
+}
+
+.modal-content {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.modal .close-icon {
+	color: #fff;
+}
+
+.modal-content img {
+	height: 20rem;
+	border-radius: 1rem;
+	margin-right: 1.4rem;
+	margin-bottom: 2rem;
+}
+
+.modal-content h3 {
+	font-size: 1.6rem;
+}
+
+.modal-content .product-star {
+	margin-bottom: 1rem;
+}
+
+.modal-content p {
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	margin: 1.1rem 0;
+}
+
+.modal-content a {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	width: 12rem;
+	margin-top: 1rem;
+	padding: 1rem 1.8rem;
+	background-color: var(--primary-color);
+	border-radius: 1rem;
+	color: #fff;
+}
+
+.modal-content a:hover {
+	opacity: 0.9;
+	transition: 0.3s;
+}
+
+@keyframes animateModal {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
 /* Media Queries Laptop */
 @media (max-width: 1366px) {
 	html {
@@ -524,6 +658,10 @@ footer .credit a {
 	.navbar-container .search-form {
 		width: 90%;
 		right: 2rem;
+	}
+
+	.modal-content {
+		flex-wrap: wrap;
 	}
 }
 /* Media Queries Mobile */

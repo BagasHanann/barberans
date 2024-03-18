@@ -25,7 +25,9 @@
 
 				<div class="navbar-extra">
 					<a href="#search" id="search-button"><i data-feather="search"></i></a>
-					<a href="#cart" id="cart"><i data-feather="shopping-bag"></i></a>
+					<a href="#cart" id="cart-button"
+						><i data-feather="shopping-bag"></i
+					></a>
 					<a href="#hamburger" id="hamburger"><i data-feather="menu"></i></a>
 				</div>
 
@@ -35,6 +37,17 @@
 					<label for="search-box" class="search-label">
 						<i data-feather="search"></i>
 					</label>
+				</div>
+
+				<div class="shopping-cart">
+					<div class="cart-items">
+						<img src="img/product.jpg" alt="product_1" />
+						<div class="item-detail">
+							<h3>Kapster 1</h3>
+							<div class="item-price">IDR 50K</div>
+						</div>
+						<i data-feather="trash-2" class="remove-item"></i>
+					</div>
 				</div>
 			</nav>
 		</header>
@@ -109,7 +122,7 @@
 						<a href="#">
 							<i data-feather="shopping-cart"></i>
 						</a>
-						<a href="">
+						<a href="#" class="item-detail-button">
 							<i data-feather="eye"></i>
 						</a>
 					</div>
@@ -131,7 +144,7 @@
 						<a href="#">
 							<i data-feather="shopping-cart"></i>
 						</a>
-						<a href="">
+						<a href="#" class="item-detail-button">
 							<i data-feather="eye"></i>
 						</a>
 					</div>
@@ -146,14 +159,14 @@
 						<i data-feather="star" class="star-full"></i>
 						<i data-feather="star"></i>
 					</div>
-					<p class="product-price">IDR 50K <span>IDR 100K</span></p>
+					<div class="product-price">IDR 50K <span>IDR 100K</span></div>
 				</div>
 				<div class="product-card">
 					<div class="product-icons">
 						<a href="#">
 							<i data-feather="shopping-cart"></i>
 						</a>
-						<a href="">
+						<a href="#" class="item-detail-button">
 							<i data-feather="eye"></i>
 						</a>
 					</div>
@@ -226,6 +239,39 @@
 			</div>
 		</footer>
 		<!-- Footer End -->
+
+		<!-- Modal Start -->
+		<div class="modal" id="modal-items">
+			<div class="modal-container">
+				<a href="">
+					<i data-feather="x" class="close-icon"></i>
+				</a>
+				<div class="modal-content">
+					<img src="img/product.jpg" alt="product_1" />
+					<div class="product-content">
+						<h3>Kapster 1</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+							inventore rem dolorem, repellat ullam vel enim blanditiis
+							molestias earum accusantium. Lorem ipsum dolor sit, amet
+							consectetur adipisicing elit. Nisi, id.
+						</p>
+						<div class="product-star">
+							<i data-feather="star" class="star-full"></i>
+							<i data-feather="star" class="star-full"></i>
+							<i data-feather="star" class="star-full"></i>
+							<i data-feather="star" class="star-full"></i>
+							<i data-feather="star"></i>
+						</div>
+						<div class="product-price">IDR 50K <span>IDR 100K</span></div>
+						<a href="#">
+							<i data-feather="shopping-cart"></i><span>Add to cart</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal End -->
 
 		<!-- Feather Icons -->
 		<script>
