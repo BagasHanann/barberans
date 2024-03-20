@@ -132,6 +132,21 @@ body {
 	transition: 0.3s;
 }
 
+#cart-button {
+	position: relative;
+}
+
+#cart-button .cart-quantity {
+	display: inline-block;
+	padding: 1px 5px;
+	background-color: var(--primary-color);
+	border-radius: 6px;
+	font-size: 0.8rem;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
 .shopping-cart .cart-items {
 	margin: 2rem 1.5rem;
 	display: flex;
@@ -143,33 +158,44 @@ body {
 }
 
 .shopping-cart img {
-	height: 6rem;
+	height: 4.4rem;
 	border-radius: 1rem;
 	margin-bottom: 1rem;
 }
 
 .shopping-cart h3 {
-	font-size: 1.3rem;
-	padding-bottom: 0.8rem;
+	font-size: 1.2rem;
+	padding-bottom: 0.4rem;
 }
 
 .shopping-cart .item-price {
 	font-size: 1.1rem;
 }
 
-.shopping-cart .remove-item {
-	font-size: 1.2rem;
-	cursor: pointer;
-	position: absolute;
-	right: 1rem;
-}
-
 .shopping-cart.active {
 	right: 0;
 }
 
-.shopping-cart .remove-item:hover {
-	color: var(--primary-color);
+.shopping-cart .cart-items #remove,
+.shopping-cart .cart-items #add {
+	display: inline-block;
+	padding: 2px 5px;
+	margin: 0 5px;
+	cursor: pointer;
+	border-radius: 8px;
+	font-size: 1.2rem;
+	background-color: var(--primary-color);
+	color: #fff;
+}
+
+.shopping-cart h4 {
+	text-align: center;
+	padding: 1rem 0;
+	font-size: 1.2rem;
+}
+
+.form-container {
+	
 }
 
 .hero {
@@ -367,12 +393,6 @@ body {
 .product .product-star .star-full {
 	color: var(--primary-color);
 	fill: var(--primary-color);
-}
-
-.product .product-price span {
-	text-decoration: line-through;
-	font-weight: lighter;
-	font-size: 0.8rem;
 }
 
 .contact .row {
@@ -663,10 +683,37 @@ footer .credit a {
 	.modal-content {
 		flex-wrap: wrap;
 	}
-}
-/* Media Queries Mobile */
-@media (max-width: 450px) {
-	html {
-		font-size: 55%;
+
+	.modal-content img {
+		height: 25rem;
+		width: 100%;
+		object-position: center;
+		object-fit: cover;
+	}
+
+	.modal .modal-container {
+		padding: 2rem 0.8rem 2rem 2rem;
+	}
+
+	.modal .close-icon {
+		display: none;
+	}
+
+	.modal a {
+		width: 30%;
+	}
+
+	#cart-button .cart-quantity {
+		position: absolute;
+		top: -10px;
+		font-size: 1rem;
+		right: -8px;
+	}
+
+	/* Media Queries Mobile */
+	@media (max-width: 450px) {
+		html {
+			font-size: 55%;
+		}
 	}
 }
